@@ -1,0 +1,79 @@
+=== MaxEnt PSD Inversion Log ===
+Script: MaxEnt_core_v3.2.1.py
+Date: 20260301_230208
+Data: D:/OneDrive/0 paper/e Zhang Tao PSD/Code/Synthetic_data/GUI_v1.4_20260301_145846-with-sf/SynData_Poisson.dat
+
+--- Input Data Stats ---
+Mode: q_i_sigma
+Scale source: n/a
+Sigma fallback used: False
+N points: 2000
+Q range: 0.0002 ~ 0.3
+I range: 0.0155592 ~ 2.15706e+06
+Sigma range: 0.000295064 ~ 4821.41
+y<0 count: 0, y==0 count: 0
+
+--- Configuration ---
+R_min: 5.0, R_max: 15000.0, N_bins: 90
+SF Model: unity
+SF Params Initial: {}
+Background: True, Powerlaw: True (n=4.0)
+Likelihood: poisson
+PSD smooth λ: 0.001
+Outer: grid_search, Coarse=20/dim, Two-stage=True, Fine=15/dim, Factor=0.25
+Fine warm-start: False
+Alpha profiled out via bisection (bounds=(1e-06, 1000000.0), tol=0.001)
+Bounds: {}
+
+--- Full MaxEntConfig ---
+C_target: None
+D_target: 1908.0
+alpha_bounds: (1e-06, 1000000.0)
+alpha_fixed: 1.0
+alpha_mode: deviance
+alpha_tol: 0.001
+eps_I: 1e-10
+likelihood: poisson
+max_bisect_iter: 40
+n_r: 90
+opt_ftol: 1e-10
+opt_gtol: 1e-08
+opt_maxiter: 2000
+poisson_scale: None
+poisson_scale_clip: (1e-12, 1000000000000.0)
+sigma_abs_floor: 0.0
+sigma_rel_floor: 0.0
+smooth_lambda: 0.001
+u_bounds: (-60.0, 60.0)
+
+--- Full OuterSearchConfig ---
+bounds: {}
+fine_grid_factor: 0.25
+fine_grid_points: 15
+fine_grid_warm_start: False
+grid_points: 20
+local_opt_ftol: 1e-05
+local_opt_top_k: 3
+local_opt_xtol: 1e-05
+mode: grid_search
+seed: 0
+step_scale: {}
+two_stage: True
+
+--- Results ---
+Alpha: 1.000000e-06
+S: -9.970972e-05
+C: 1.615137e+06
+Smooth cost: 0.000000e+00
+Deviance D: 3230273.8427
+D/n_eff: 1615.1369
+n_eff / M: 2000 / 2000
+Score: -1617491.9740
+SF Params: {}
+Extras: {'background': 0.014356353169091667, 'powerlaw_amp': 2.5198607491048817e-12}
+I_fit range: 0.015768 ~ 2.15893e+06
+Time: 1.1s
+
+--- Porosity ---
+Δρ: 3.98, Total: 4.3253%
+Partial (10-15000 Å): 4.2899%

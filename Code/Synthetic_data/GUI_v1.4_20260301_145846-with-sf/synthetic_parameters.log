@@ -1,0 +1,26 @@
+=== Synthetic Data Generation Parameters ===
+Q Grid: min=0.0002, max=0.3, N_q=2000
+PSD True Grid: R_min=5.0, R_max=15000.0, N_bins=90, phi_total=0.1
+Peak 1: w=2.0, r0=150.0, s=0.6
+Peak 2: w=3.0, r0=2500.0, s=0.55
+Peak 3: w=0.0, r0=0.0, s=0.0
+Systematics & Noise:
+  SLD Contrast: 3.98
+  Poiss Time (time_factor): 50000.0
+  Poisson Generation Mode: Effective scale_i(q)
+  BG cm-1: 0.015
+  BG rel err: 0.02
+  Sys err lowQ: 0.001
+  Sys err highQ: 0.0008
+  Sys q0: 0.002
+  Sys p: 1.5
+  Sigma floor abs: 2e-05
+  Counts Cap: 200000.0
+Ripple Effect: Enabled=False, Rel Amp=0.01, Corr Decades=0.6
+Stitch Mismatch: Enabled=False, Rel Sigma=0.02, Edges=(0.0008, 0.02)
+Structure Factor: Hard Sphere (R_hs=200.0, eta=0.25)
+
+=== Diagnostics ===
+scale_i pct[1,50,99]: [9.74303124e-02 6.07819133e+02 1.25700878e+06]
+expected_counts pct[1,50,99]: [  3039.71233498 200000.         200000.        ] max=200000.0
+sigma_total/I pct[1,50,99]: [0.00223039 0.0022366  0.01836004]

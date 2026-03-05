@@ -1,0 +1,79 @@
+=== MaxEnt PSD Inversion Log ===
+Script: MaxEnt_core_v3.2.1.py
+Date: 20260304_005237
+Data: D:/OneDrive/0 paper/e Zhang Tao PSD/Code/Test.dat
+
+--- Input Data Stats ---
+Mode: q_i_sigma
+Scale source: n/a
+Sigma fallback used: False
+N points: 439
+Q range: 0.00026288 ~ 0.545839
+I range: 0.0183499 ~ 1.99739e+06
+Sigma range: 0.0704751 ~ 127000
+y<0 count: 0, y==0 count: 0
+
+--- Configuration ---
+R_min: 5.0, R_max: 15000.0, N_bins: 90
+SF Model: hard_sphere_py
+SF Params Initial: {'R_hs': 500.0, 'eta': 0.3}
+Background: True, Powerlaw: True (n=4.0)
+Likelihood: poisson
+PSD smooth λ: 0.001
+Outer: grid_search, Coarse=20/dim, Two-stage=True, Fine=15/dim, Factor=0.25
+Fine warm-start: False
+Alpha profiled out via bisection (bounds=(1e-06, 1000000.0), tol=0.001)
+Bounds: {'R_hs': (2.5, 30000.0), 'eta': (0.01, 0.48)}
+
+--- Full MaxEntConfig ---
+C_target: None
+D_target: 347.0
+alpha_bounds: (1e-06, 1000000.0)
+alpha_fixed: 1.0
+alpha_mode: deviance
+alpha_tol: 0.001
+eps_I: 1e-10
+likelihood: poisson
+max_bisect_iter: 40
+n_r: 90
+opt_ftol: 1e-10
+opt_gtol: 1e-08
+opt_maxiter: 2000
+poisson_scale: None
+poisson_scale_clip: (1e-12, 1000000000000.0)
+sigma_abs_floor: 0.0
+sigma_rel_floor: 0.0
+smooth_lambda: 0.001
+u_bounds: (-60.0, 60.0)
+
+--- Full OuterSearchConfig ---
+bounds: {'R_hs': (2.5, 30000.0), 'eta': (0.01, 0.48)}
+fine_grid_factor: 0.25
+fine_grid_points: 15
+fine_grid_warm_start: False
+grid_points: 20
+local_opt_ftol: 1e-05
+local_opt_top_k: 3
+local_opt_xtol: 1e-05
+mode: grid_search
+seed: 0
+step_scale: {'R_hs': 0.145, 'eta': 0.01}
+two_stage: True
+
+--- Results ---
+Alpha: 1.000000e-06
+S: -1.333963e-04
+C: 3.135635e+02
+Smooth cost: 0.000000e+00
+Deviance D: 627.1271
+D/n_eff: 1.4285
+n_eff / M: 439 / 439
+Score: -2363.5133
+SF Params: {'R_hs': 4152.85010305038, 'eta': 0.08421052631578947}
+Extras: {'background': 0.03156107447039923, 'powerlaw_amp': 2.7754270538160234e-14}
+I_fit range: 0.0324243 ~ 1.92063e+06
+Time: 1011.8s
+
+--- Porosity ---
+Δρ: 3.98, Total: 9.2037%
+Partial (10-15000 Å): 8.3101%
